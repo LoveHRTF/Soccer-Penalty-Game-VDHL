@@ -1,0 +1,32 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+
+entity message is
+port(
+			row, col : in std_logic_vector(9 downto 0);
+			address : out std_logic_vector(7 downto 0)
+);
+end entity;
+
+architecture x of message is
+signal letter : std_logic_vector(4 downto 0);
+signal row_part : std_logic_vector(2 downto 0);
+begin
+
+with col(9 downto 3) select -- col / 8
+letter <= "00111" when "0000000",
+			 "00100" when "0000001",
+			 "01011" when "0000010",
+			 "01011" when "0000011",
+			 "01110" when "0000100",
+			 "11010" when others;
+
+row_part <= row(2 downto 0);
+
+address <= letter & row_part;
+
+end architecture;			 
+
+
+
+

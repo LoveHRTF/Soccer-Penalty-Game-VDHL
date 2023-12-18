@@ -1,0 +1,1147 @@
+TimeQuest Timing Analyzer report for vga_demo
+Wed Sep 21 10:35:08 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'inst2|altpll_component|pll|clk[0]'
+ 12. Slow Model Hold: 'inst2|altpll_component|pll|clk[0]'
+ 13. Slow Model Minimum Pulse Width: 'CLOCK_50'
+ 14. Slow Model Minimum Pulse Width: 'inst2|altpll_component|pll|clk[0]'
+ 15. Clock to Output Times
+ 16. Minimum Clock to Output Times
+ 17. Fast Model Setup Summary
+ 18. Fast Model Hold Summary
+ 19. Fast Model Recovery Summary
+ 20. Fast Model Removal Summary
+ 21. Fast Model Minimum Pulse Width Summary
+ 22. Fast Model Setup: 'inst2|altpll_component|pll|clk[0]'
+ 23. Fast Model Hold: 'inst2|altpll_component|pll|clk[0]'
+ 24. Fast Model Minimum Pulse Width: 'CLOCK_50'
+ 25. Fast Model Minimum Pulse Width: 'inst2|altpll_component|pll|clk[0]'
+ 26. Clock to Output Times
+ 27. Minimum Clock to Output Times
+ 28. Multicorner Timing Analysis Summary
+ 29. Clock to Output Times
+ 30. Minimum Clock to Output Times
+ 31. Setup Transfers
+ 32. Hold Transfers
+ 33. Report TCCS
+ 34. Report RSKM
+ 35. Unconstrained Paths
+ 36. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; vga_demo                                                          ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                   ;
++-----------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+----------+-------------------------------------+---------------------------------------+
+; Clock Name                        ; Type      ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master   ; Source                              ; Targets                               ;
++-----------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+----------+-------------------------------------+---------------------------------------+
+; CLOCK_50                          ; Base      ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;          ;                                     ; { CLOCK_50 }                          ;
+; inst2|altpll_component|pll|clk[0] ; Generated ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ; 50.00      ; 2         ; 1           ;       ;        ;           ;            ; false    ; CLOCK_50 ; inst2|altpll_component|pll|inclk[0] ; { inst2|altpll_component|pll|clk[0] } ;
++-----------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+----------+-------------------------------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                 ;
++------------+-----------------+-----------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                        ; Note ;
++------------+-----------------+-----------------------------------+------+
+; 147.04 MHz ; 147.04 MHz      ; inst2|altpll_component|pll|clk[0] ;      ;
++------------+-----------------+-----------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------------------------------+
+; Slow Model Setup Summary                                   ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; inst2|altpll_component|pll|clk[0] ; 33.199 ; 0.000         ;
++-----------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------+
+; Slow Model Hold Summary                                   ;
++-----------------------------------+-------+---------------+
+; Clock                             ; Slack ; End Point TNS ;
++-----------------------------------+-------+---------------+
+; inst2|altpll_component|pll|clk[0] ; 0.445 ; 0.000         ;
++-----------------------------------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                     ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; CLOCK_50                          ; 10.000 ; 0.000         ;
+; inst2|altpll_component|pll|clk[0] ; 17.686 ; 0.000         ;
++-----------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'inst2|altpll_component|pll|clk[0]'                                                                                                                                                                                                             ;
++--------+--------------------------------------------------------------------------------------------------------------+--------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                                    ; To Node                  ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------------------------------------------------------------+--------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 33.199 ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg0 ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; -0.079     ; 6.760      ;
+; 33.199 ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg1 ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; -0.079     ; 6.760      ;
+; 33.199 ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg2 ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; -0.079     ; 6.760      ;
+; 33.199 ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg3 ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; -0.079     ; 6.760      ;
+; 33.199 ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg4 ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; -0.079     ; 6.760      ;
+; 33.199 ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg5 ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; -0.079     ; 6.760      ;
+; 33.199 ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg6 ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; -0.079     ; 6.760      ;
+; 33.199 ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg7 ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; -0.079     ; 6.760      ;
+; 33.989 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 6.052      ;
+; 33.989 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 6.052      ;
+; 33.989 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 6.052      ;
+; 34.056 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.984      ;
+; 34.056 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.984      ;
+; 34.105 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.935      ;
+; 34.105 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.935      ;
+; 34.436 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 5.605      ;
+; 34.436 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 5.605      ;
+; 34.436 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 5.605      ;
+; 34.447 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 5.594      ;
+; 34.447 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 5.594      ;
+; 34.447 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 5.594      ;
+; 34.503 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.537      ;
+; 34.503 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.537      ;
+; 34.514 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.526      ;
+; 34.514 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.526      ;
+; 34.552 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.488      ;
+; 34.552 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.488      ;
+; 34.559 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.481      ;
+; 34.561 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[4] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.479      ;
+; 34.563 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.477      ;
+; 34.563 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.477      ;
+; 34.566 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[8] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.474      ;
+; 34.740 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 5.301      ;
+; 34.740 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 5.301      ;
+; 34.740 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 5.301      ;
+; 34.807 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.233      ;
+; 34.807 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.233      ;
+; 34.856 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.184      ;
+; 34.856 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.184      ;
+; 34.974 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 5.067      ;
+; 34.974 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 5.067      ;
+; 34.974 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 5.067      ;
+; 34.994 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 5.047      ;
+; 34.994 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 5.047      ;
+; 34.994 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 5.047      ;
+; 35.006 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.034      ;
+; 35.008 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[4] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.032      ;
+; 35.013 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[8] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.027      ;
+; 35.017 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.023      ;
+; 35.019 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[4] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.021      ;
+; 35.024 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[8] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 5.016      ;
+; 35.041 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.999      ;
+; 35.041 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.999      ;
+; 35.061 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.979      ;
+; 35.061 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.979      ;
+; 35.090 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.950      ;
+; 35.090 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.950      ;
+; 35.110 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.930      ;
+; 35.110 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.930      ;
+; 35.153 ; VGA_SYNC:inst|h_count[3]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 4.888      ;
+; 35.153 ; VGA_SYNC:inst|h_count[3]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 4.888      ;
+; 35.153 ; VGA_SYNC:inst|h_count[3]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 4.888      ;
+; 35.220 ; VGA_SYNC:inst|h_count[3]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.820      ;
+; 35.220 ; VGA_SYNC:inst|h_count[3]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.820      ;
+; 35.269 ; VGA_SYNC:inst|h_count[3]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.771      ;
+; 35.269 ; VGA_SYNC:inst|h_count[3]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.771      ;
+; 35.310 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.730      ;
+; 35.312 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[4] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.728      ;
+; 35.317 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[8] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.723      ;
+; 35.369 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|h_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 4.669      ;
+; 35.390 ; VGA_SYNC:inst|h_count[8]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 4.651      ;
+; 35.390 ; VGA_SYNC:inst|h_count[8]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 4.651      ;
+; 35.390 ; VGA_SYNC:inst|h_count[8]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 4.651      ;
+; 35.420 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.001      ; 4.619      ;
+; 35.420 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.001      ; 4.619      ;
+; 35.420 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.001      ; 4.619      ;
+; 35.448 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[8] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 4.590      ;
+; 35.457 ; VGA_SYNC:inst|h_count[8]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.583      ;
+; 35.457 ; VGA_SYNC:inst|h_count[8]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.583      ;
+; 35.487 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 4.551      ;
+; 35.487 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 4.551      ;
+; 35.506 ; VGA_SYNC:inst|h_count[8]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.534      ;
+; 35.506 ; VGA_SYNC:inst|h_count[8]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.534      ;
+; 35.517 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.001      ; 4.522      ;
+; 35.536 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 4.502      ;
+; 35.536 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 4.502      ;
+; 35.544 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.496      ;
+; 35.546 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[4] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.494      ;
+; 35.551 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[8] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.489      ;
+; 35.564 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.476      ;
+; 35.566 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[4] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.474      ;
+; 35.571 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[8] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.469      ;
+; 35.613 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[4] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 4.425      ;
+; 35.614 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 4.424      ;
+; 35.618 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|h_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 4.420      ;
+; 35.620 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|h_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 4.418      ;
+; 35.621 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|h_count[8] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 4.417      ;
+; 35.723 ; VGA_SYNC:inst|h_count[3]                                                                                     ; VGA_SYNC:inst|v_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.317      ;
+; 35.725 ; VGA_SYNC:inst|h_count[3]                                                                                     ; VGA_SYNC:inst|v_count[4] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 4.315      ;
+; 35.729 ; VGA_SYNC:inst|h_count[9]                                                                                     ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.001      ; 4.310      ;
++--------+--------------------------------------------------------------------------------------------------------------+--------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'inst2|altpll_component|pll|clk[0]'                                                                                                                                                                                                             ;
++-------+--------------------------+--------------------------------------------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                                                                                                      ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------------------------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.445 ; VGA_SYNC:inst|v_count[3] ; VGA_SYNC:inst|v_count[3]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; VGA_SYNC:inst|v_count[4] ; VGA_SYNC:inst|v_count[4]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; VGA_SYNC:inst|v_count[5] ; VGA_SYNC:inst|v_count[5]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; VGA_SYNC:inst|v_count[6] ; VGA_SYNC:inst|v_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; VGA_SYNC:inst|v_count[7] ; VGA_SYNC:inst|v_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; VGA_SYNC:inst|v_count[8] ; VGA_SYNC:inst|v_count[8]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; VGA_SYNC:inst|v_count[9] ; VGA_SYNC:inst|v_count[9]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; VGA_SYNC:inst|v_count[2] ; VGA_SYNC:inst|v_count[2]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.868 ; VGA_SYNC:inst|v_count[9] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 1.155      ;
+; 0.976 ; VGA_SYNC:inst|h_count[1] ; VGA_SYNC:inst|h_count[1]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.262      ;
+; 0.977 ; VGA_SYNC:inst|h_count[3] ; VGA_SYNC:inst|h_count[3]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; VGA_SYNC:inst|h_count[6] ; VGA_SYNC:inst|h_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.263      ;
+; 1.016 ; VGA_SYNC:inst|h_count[2] ; VGA_SYNC:inst|h_count[2]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.302      ;
+; 1.016 ; VGA_SYNC:inst|h_count[4] ; VGA_SYNC:inst|h_count[4]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.302      ;
+; 1.018 ; VGA_SYNC:inst|h_count[7] ; VGA_SYNC:inst|h_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.304      ;
+; 1.166 ; VGA_SYNC:inst|h_count[9] ; VGA_SYNC:inst|h_count[8]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.452      ;
+; 1.167 ; VGA_SYNC:inst|h_count[9] ; VGA_SYNC:inst|h_count[9]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.453      ;
+; 1.169 ; VGA_SYNC:inst|h_count[9] ; VGA_SYNC:inst|h_count[5]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.455      ;
+; 1.208 ; VGA_SYNC:inst|v_count[3] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 1.495      ;
+; 1.262 ; VGA_SYNC:inst|v_count[7] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.548      ;
+; 1.408 ; VGA_SYNC:inst|h_count[1] ; VGA_SYNC:inst|h_count[2]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.694      ;
+; 1.409 ; VGA_SYNC:inst|h_count[3] ; VGA_SYNC:inst|h_count[4]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.695      ;
+; 1.418 ; VGA_SYNC:inst|h_count[9] ; VGA_SYNC:inst|h_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.704      ;
+; 1.434 ; VGA_SYNC:inst|h_count[0] ; VGA_SYNC:inst|h_count[1]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.720      ;
+; 1.449 ; VGA_SYNC:inst|h_count[2] ; VGA_SYNC:inst|h_count[3]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.735      ;
+; 1.472 ; VGA_SYNC:inst|h_count[0] ; VGA_SYNC:inst|h_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.758      ;
+; 1.488 ; VGA_SYNC:inst|v_count[8] ; VGA_SYNC:inst|v_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.774      ;
+; 1.488 ; VGA_SYNC:inst|h_count[1] ; VGA_SYNC:inst|h_count[3]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.774      ;
+; 1.510 ; VGA_SYNC:inst|h_count[6] ; VGA_SYNC:inst|h_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.796      ;
+; 1.514 ; VGA_SYNC:inst|h_count[0] ; VGA_SYNC:inst|h_count[2]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.800      ;
+; 1.524 ; VGA_SYNC:inst|h_count[5] ; VGA_SYNC:inst|h_count[8]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.810      ;
+; 1.525 ; VGA_SYNC:inst|h_count[5] ; VGA_SYNC:inst|h_count[9]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.811      ;
+; 1.527 ; VGA_SYNC:inst|h_count[5] ; VGA_SYNC:inst|h_count[5]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.813      ;
+; 1.529 ; VGA_SYNC:inst|h_count[4] ; VGA_SYNC:inst|h_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.815      ;
+; 1.529 ; VGA_SYNC:inst|h_count[2] ; VGA_SYNC:inst|h_count[4]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.815      ;
+; 1.568 ; VGA_SYNC:inst|h_count[1] ; VGA_SYNC:inst|h_count[4]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.854      ;
+; 1.569 ; VGA_SYNC:inst|h_count[3] ; VGA_SYNC:inst|h_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.855      ;
+; 1.578 ; VGA_SYNC:inst|v_count[5] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.864      ;
+; 1.594 ; VGA_SYNC:inst|h_count[0] ; VGA_SYNC:inst|h_count[3]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.880      ;
+; 1.622 ; VGA_SYNC:inst|v_count[6] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.908      ;
+; 1.643 ; VGA_SYNC:inst|v_count[8] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 1.930      ;
+; 1.674 ; VGA_SYNC:inst|h_count[0] ; VGA_SYNC:inst|h_count[4]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.960      ;
+; 1.678 ; VGA_SYNC:inst|h_count[8] ; VGA_SYNC:inst|v_count[1]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 1.966      ;
+; 1.687 ; VGA_SYNC:inst|h_count[5] ; VGA_SYNC:inst|h_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.973      ;
+; 1.689 ; VGA_SYNC:inst|h_count[2] ; VGA_SYNC:inst|h_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.975      ;
+; 1.693 ; VGA_SYNC:inst|h_count[1] ; VGA_SYNC:inst|horiz_sync_out                                                                                 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 1.980      ;
+; 1.703 ; VGA_SYNC:inst|h_count[4] ; VGA_SYNC:inst|h_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.989      ;
+; 1.728 ; VGA_SYNC:inst|h_count[1] ; VGA_SYNC:inst|h_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.014      ;
+; 1.743 ; VGA_SYNC:inst|h_count[3] ; VGA_SYNC:inst|h_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.029      ;
+; 1.755 ; VGA_SYNC:inst|v_count[1] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 2.042      ;
+; 1.776 ; VGA_SYNC:inst|h_count[5] ; VGA_SYNC:inst|h_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.062      ;
+; 1.802 ; VGA_SYNC:inst|v_count[7] ; VGA_SYNC:inst|v_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; -0.001     ; 2.087      ;
+; 1.834 ; VGA_SYNC:inst|h_count[0] ; VGA_SYNC:inst|h_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.120      ;
+; 1.845 ; VGA_SYNC:inst|h_count[8] ; VGA_SYNC:inst|v_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 2.133      ;
+; 1.847 ; VGA_SYNC:inst|v_count[8] ; VGA_SYNC:inst|v_count[1]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.133      ;
+; 1.861 ; VGA_SYNC:inst|h_count[5] ; VGA_SYNC:inst|h_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.147      ;
+; 1.863 ; VGA_SYNC:inst|h_count[2] ; VGA_SYNC:inst|h_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.149      ;
+; 1.879 ; VGA_SYNC:inst|v_count[5] ; VGA_SYNC:inst|v_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.165      ;
+; 1.902 ; VGA_SYNC:inst|h_count[1] ; VGA_SYNC:inst|h_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.188      ;
+; 1.912 ; VGA_SYNC:inst|v_count[2] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 2.199      ;
+; 1.913 ; VGA_SYNC:inst|h_count[8] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg5 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.080      ; 2.243      ;
+; 1.915 ; VGA_SYNC:inst|h_count[8] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg4 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.080      ; 2.245      ;
+; 1.916 ; VGA_SYNC:inst|v_count[2] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg2 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.078      ; 2.244      ;
+; 1.924 ; VGA_SYNC:inst|h_count[8] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg3 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.080      ; 2.254      ;
+; 1.931 ; VGA_SYNC:inst|h_count[8] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg7 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.080      ; 2.261      ;
+; 1.934 ; VGA_SYNC:inst|h_count[8] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg6 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.080      ; 2.264      ;
+; 1.935 ; VGA_SYNC:inst|v_count[1] ; VGA_SYNC:inst|v_count[1]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.221      ;
+; 1.952 ; VGA_SYNC:inst|v_count[1] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg1 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.078      ; 2.280      ;
+; 1.959 ; VGA_SYNC:inst|v_count[6] ; VGA_SYNC:inst|v_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; -0.001     ; 2.244      ;
+; 2.008 ; VGA_SYNC:inst|h_count[0] ; VGA_SYNC:inst|h_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.294      ;
+; 2.010 ; VGA_SYNC:inst|v_count[8] ; VGA_SYNC:inst|v_count[4]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.296      ;
+; 2.012 ; VGA_SYNC:inst|v_count[8] ; VGA_SYNC:inst|v_count[9]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.298      ;
+; 2.027 ; VGA_SYNC:inst|h_count[7] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg4 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.080      ; 2.357      ;
+; 2.029 ; VGA_SYNC:inst|h_count[8] ; VGA_SYNC:inst|h_count[8]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.315      ;
+; 2.032 ; VGA_SYNC:inst|v_count[1] ; VGA_SYNC:inst|v_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.318      ;
+; 2.041 ; VGA_SYNC:inst|h_count[7] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg7 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.080      ; 2.371      ;
+; 2.041 ; VGA_SYNC:inst|h_count[7] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg6 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.080      ; 2.371      ;
+; 2.051 ; VGA_SYNC:inst|v_count[0] ; VGA_SYNC:inst|v_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.337      ;
+; 2.058 ; VGA_SYNC:inst|h_count[0] ; VGA_SYNC:inst|horiz_sync_out                                                                                 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 2.345      ;
+; 2.066 ; VGA_SYNC:inst|h_count[9] ; VGA_SYNC:inst|blue[0]                                                                                        ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 2.353      ;
+; 2.067 ; VGA_SYNC:inst|h_count[7] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg5 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.080      ; 2.397      ;
+; 2.080 ; VGA_SYNC:inst|v_count[5] ; VGA_SYNC:inst|v_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; -0.001     ; 2.365      ;
+; 2.080 ; VGA_SYNC:inst|h_count[7] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg3 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.080      ; 2.410      ;
+; 2.084 ; VGA_SYNC:inst|v_count[4] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 2.371      ;
+; 2.088 ; VGA_SYNC:inst|h_count[2] ; VGA_SYNC:inst|horiz_sync_out                                                                                 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 2.375      ;
+; 2.106 ; VGA_SYNC:inst|h_count[9] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg5 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.080      ; 2.436      ;
+; 2.113 ; VGA_SYNC:inst|h_count[9] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg3 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.080      ; 2.443      ;
+; 2.130 ; VGA_SYNC:inst|v_count[4] ; VGA_SYNC:inst|v_count[5]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 2.417      ;
+; 2.155 ; VGA_SYNC:inst|h_count[7] ; VGA_SYNC:inst|h_count[9]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.441      ;
+; 2.159 ; VGA_SYNC:inst|v_count[0] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg0 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.078      ; 2.487      ;
+; 2.161 ; VGA_SYNC:inst|v_count[7] ; VGA_SYNC:inst|v_count[1]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; -0.001     ; 2.446      ;
+; 2.170 ; VGA_SYNC:inst|h_count[8] ; VGA_SYNC:inst|blue[0]                                                                                        ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 2.457      ;
+; 2.187 ; VGA_SYNC:inst|v_count[3] ; VGA_SYNC:inst|v_count[5]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 2.474      ;
+; 2.197 ; VGA_SYNC:inst|h_count[8] ; VGA_SYNC:inst|v_count[8]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 2.485      ;
+; 2.202 ; VGA_SYNC:inst|h_count[8] ; VGA_SYNC:inst|v_count[4]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 2.490      ;
+; 2.203 ; VGA_SYNC:inst|v_count[2] ; VGA_SYNC:inst|v_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 2.489      ;
+; 2.204 ; VGA_SYNC:inst|h_count[8] ; VGA_SYNC:inst|v_count[9]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 2.492      ;
+; 2.210 ; VGA_SYNC:inst|v_count[4] ; VGA_SYNC:inst|v_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 2.497      ;
+; 2.220 ; VGA_SYNC:inst|h_count[9] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg7 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.080      ; 2.550      ;
+; 2.226 ; VGA_SYNC:inst|h_count[9] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg6 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.080      ; 2.556      ;
++-------+--------------------------+--------------------------------------------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK_50'                                                                              ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------+
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50|combout                    ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50|combout                    ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; inst2|altpll_component|pll|clk[0]   ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; inst2|altpll_component|pll|clk[0]   ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; inst2|altpll_component|pll|inclk[0] ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; inst2|altpll_component|pll|inclk[0] ;
+; 17.369 ; 20.000       ; 2.631          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                            ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'inst2|altpll_component|pll|clk[0]'                                                                                                                                                       ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                             ; Clock Edge ; Target                                                                                                       ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+; 17.686 ; 20.000       ; 2.314          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 17.686 ; 20.000       ; 2.314          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 17.686 ; 20.000       ; 2.314          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg1 ;
+; 17.686 ; 20.000       ; 2.314          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg1 ;
+; 17.686 ; 20.000       ; 2.314          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg2 ;
+; 17.686 ; 20.000       ; 2.314          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg2 ;
+; 17.686 ; 20.000       ; 2.314          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg3 ;
+; 17.686 ; 20.000       ; 2.314          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg3 ;
+; 17.686 ; 20.000       ; 2.314          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg4 ;
+; 17.686 ; 20.000       ; 2.314          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg4 ;
+; 17.686 ; 20.000       ; 2.314          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg5 ;
+; 17.686 ; 20.000       ; 2.314          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg5 ;
+; 17.686 ; 20.000       ; 2.314          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg6 ;
+; 17.686 ; 20.000       ; 2.314          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg6 ;
+; 17.686 ; 20.000       ; 2.314          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg7 ;
+; 17.686 ; 20.000       ; 2.314          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg7 ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|blue[0]                                                                                        ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|blue[0]                                                                                        ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[0]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[0]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[1]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[1]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[2]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[2]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[3]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[3]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[4]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[4]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[5]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[5]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[6]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[6]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[7]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[7]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[8]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[8]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[9]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[9]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|horiz_sync_out                                                                                 ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|horiz_sync_out                                                                                 ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[0]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[0]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[1]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[1]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[2]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[2]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[3]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[3]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[4]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[4]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[5]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[5]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[6]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[6]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[7]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[7]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[8]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[8]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[9]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[9]                                                                                     ;
+; 18.889 ; 20.000       ; 1.111          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|vert_sync_out                                                                                  ;
+; 18.889 ; 20.000       ; 1.111          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|vert_sync_out                                                                                  ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst1|actual_memory_rtl_0|auto_generated|ram_block1a0|clk0                                                   ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst1|actual_memory_rtl_0|auto_generated|ram_block1a0|clk0                                                   ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst2|altpll_component|_clk0~clkctrl|inclk[0]                                                                ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst2|altpll_component|_clk0~clkctrl|inclk[0]                                                                ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst2|altpll_component|_clk0~clkctrl|outclk                                                                  ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst2|altpll_component|_clk0~clkctrl|outclk                                                                  ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|blue[0]|clk                                                                                             ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|blue[0]|clk                                                                                             ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[0]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[0]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[1]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[1]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[2]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[2]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[3]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[3]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[4]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[4]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[5]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[5]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[6]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[6]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[7]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[7]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[8]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[8]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[9]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[9]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|horiz_sync_out|clk                                                                                      ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|horiz_sync_out|clk                                                                                      ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|v_count[0]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|v_count[0]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|v_count[1]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|v_count[1]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|v_count[2]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|v_count[2]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|v_count[3]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|v_count[3]|clk                                                                                          ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; VGA_B[*]  ; CLOCK_50   ; 8.315 ; 8.315 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[0] ; CLOCK_50   ; 8.315 ; 8.315 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[1] ; CLOCK_50   ; 8.272 ; 8.272 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[2] ; CLOCK_50   ; 8.288 ; 8.288 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[3] ; CLOCK_50   ; 8.248 ; 8.248 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_G[*]  ; CLOCK_50   ; 8.622 ; 8.622 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[0] ; CLOCK_50   ; 8.622 ; 8.622 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[1] ; CLOCK_50   ; 7.998 ; 7.998 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[2] ; CLOCK_50   ; 8.315 ; 8.315 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[3] ; CLOCK_50   ; 8.622 ; 8.622 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_HS    ; CLOCK_50   ; 4.994 ; 4.994 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_R[*]  ; CLOCK_50   ; 8.618 ; 8.618 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[0] ; CLOCK_50   ; 8.602 ; 8.602 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[1] ; CLOCK_50   ; 8.600 ; 8.600 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[2] ; CLOCK_50   ; 8.618 ; 8.618 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[3] ; CLOCK_50   ; 8.588 ; 8.588 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_VS    ; CLOCK_50   ; 5.475 ; 5.475 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; VGA_B[*]  ; CLOCK_50   ; 6.332 ; 6.332 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[0] ; CLOCK_50   ; 6.399 ; 6.399 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[1] ; CLOCK_50   ; 6.356 ; 6.356 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[2] ; CLOCK_50   ; 6.372 ; 6.372 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[3] ; CLOCK_50   ; 6.332 ; 6.332 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_G[*]  ; CLOCK_50   ; 6.082 ; 6.082 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[0] ; CLOCK_50   ; 6.706 ; 6.706 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[1] ; CLOCK_50   ; 6.082 ; 6.082 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[2] ; CLOCK_50   ; 6.399 ; 6.399 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[3] ; CLOCK_50   ; 6.706 ; 6.706 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_HS    ; CLOCK_50   ; 4.994 ; 4.994 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_R[*]  ; CLOCK_50   ; 6.672 ; 6.672 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[0] ; CLOCK_50   ; 6.686 ; 6.686 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[1] ; CLOCK_50   ; 6.684 ; 6.684 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[2] ; CLOCK_50   ; 6.702 ; 6.702 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[3] ; CLOCK_50   ; 6.672 ; 6.672 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_VS    ; CLOCK_50   ; 5.475 ; 5.475 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++------------------------------------------------------------+
+; Fast Model Setup Summary                                   ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; inst2|altpll_component|pll|clk[0] ; 36.799 ; 0.000         ;
++-----------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------+
+; Fast Model Hold Summary                                   ;
++-----------------------------------+-------+---------------+
+; Clock                             ; Slack ; End Point TNS ;
++-----------------------------------+-------+---------------+
+; inst2|altpll_component|pll|clk[0] ; 0.215 ; 0.000         ;
++-----------------------------------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                     ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; CLOCK_50                          ; 10.000 ; 0.000         ;
+; inst2|altpll_component|pll|clk[0] ; 18.077 ; 0.000         ;
++-----------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'inst2|altpll_component|pll|clk[0]'                                                                                                                                                                                                             ;
++--------+--------------------------------------------------------------------------------------------------------------+--------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                                    ; To Node                  ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------------------------------------------------------------+--------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 36.799 ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg0 ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; -0.066     ; 3.167      ;
+; 36.799 ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg1 ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; -0.066     ; 3.167      ;
+; 36.799 ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg2 ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; -0.066     ; 3.167      ;
+; 36.799 ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg3 ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; -0.066     ; 3.167      ;
+; 36.799 ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg4 ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; -0.066     ; 3.167      ;
+; 36.799 ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg5 ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; -0.066     ; 3.167      ;
+; 36.799 ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg6 ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; -0.066     ; 3.167      ;
+; 36.799 ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg7 ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; -0.066     ; 3.167      ;
+; 37.708 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.326      ;
+; 37.708 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.326      ;
+; 37.772 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 2.263      ;
+; 37.772 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 2.263      ;
+; 37.772 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 2.263      ;
+; 37.797 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.237      ;
+; 37.797 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.237      ;
+; 37.874 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.160      ;
+; 37.874 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.160      ;
+; 37.880 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.154      ;
+; 37.880 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.154      ;
+; 37.938 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 2.097      ;
+; 37.938 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 2.097      ;
+; 37.938 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 2.097      ;
+; 37.944 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 2.091      ;
+; 37.944 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 2.091      ;
+; 37.944 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 2.091      ;
+; 37.963 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.071      ;
+; 37.963 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.071      ;
+; 37.969 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.065      ;
+; 37.969 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.065      ;
+; 37.972 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.062      ;
+; 37.974 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[4] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.060      ;
+; 37.979 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|v_count[8] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.055      ;
+; 38.009 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.025      ;
+; 38.009 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 2.025      ;
+; 38.073 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 1.962      ;
+; 38.073 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 1.962      ;
+; 38.073 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 1.962      ;
+; 38.079 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.955      ;
+; 38.079 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.955      ;
+; 38.098 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.936      ;
+; 38.098 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.936      ;
+; 38.105 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.929      ;
+; 38.105 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.929      ;
+; 38.136 ; VGA_SYNC:inst|h_count[3]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.898      ;
+; 38.136 ; VGA_SYNC:inst|h_count[3]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.898      ;
+; 38.138 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.896      ;
+; 38.140 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[4] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.894      ;
+; 38.143 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 1.892      ;
+; 38.143 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 1.892      ;
+; 38.143 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 1.892      ;
+; 38.144 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.890      ;
+; 38.145 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|v_count[8] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.889      ;
+; 38.146 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[4] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.888      ;
+; 38.151 ; VGA_SYNC:inst|h_count[0]                                                                                     ; VGA_SYNC:inst|v_count[8] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.883      ;
+; 38.168 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.866      ;
+; 38.168 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.866      ;
+; 38.169 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 1.866      ;
+; 38.169 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 1.866      ;
+; 38.169 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 1.866      ;
+; 38.194 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.840      ;
+; 38.194 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.840      ;
+; 38.196 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 1.836      ;
+; 38.196 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 1.836      ;
+; 38.200 ; VGA_SYNC:inst|h_count[3]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 1.835      ;
+; 38.200 ; VGA_SYNC:inst|h_count[3]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 1.835      ;
+; 38.200 ; VGA_SYNC:inst|h_count[3]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 1.835      ;
+; 38.209 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|h_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 1.823      ;
+; 38.225 ; VGA_SYNC:inst|h_count[3]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.809      ;
+; 38.225 ; VGA_SYNC:inst|h_count[3]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.809      ;
+; 38.241 ; VGA_SYNC:inst|h_count[8]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.793      ;
+; 38.241 ; VGA_SYNC:inst|h_count[8]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.793      ;
+; 38.260 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.001      ; 1.773      ;
+; 38.260 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.001      ; 1.773      ;
+; 38.260 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.001      ; 1.773      ;
+; 38.272 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[8] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 1.760      ;
+; 38.273 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.761      ;
+; 38.275 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[4] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.759      ;
+; 38.280 ; VGA_SYNC:inst|h_count[1]                                                                                     ; VGA_SYNC:inst|v_count[8] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.754      ;
+; 38.285 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 1.747      ;
+; 38.285 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 1.747      ;
+; 38.305 ; VGA_SYNC:inst|h_count[8]                                                                                     ; VGA_SYNC:inst|v_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 1.730      ;
+; 38.305 ; VGA_SYNC:inst|h_count[8]                                                                                     ; VGA_SYNC:inst|v_count[6] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 1.730      ;
+; 38.305 ; VGA_SYNC:inst|h_count[8]                                                                                     ; VGA_SYNC:inst|v_count[7] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.003      ; 1.730      ;
+; 38.323 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|h_count[5] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 1.709      ;
+; 38.326 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|h_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 1.706      ;
+; 38.326 ; VGA_SYNC:inst|h_count[6]                                                                                     ; VGA_SYNC:inst|h_count[8] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 1.706      ;
+; 38.330 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[4] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 1.702      ;
+; 38.330 ; VGA_SYNC:inst|h_count[8]                                                                                     ; VGA_SYNC:inst|v_count[3] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.704      ;
+; 38.330 ; VGA_SYNC:inst|h_count[8]                                                                                     ; VGA_SYNC:inst|v_count[2] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.704      ;
+; 38.331 ; VGA_SYNC:inst|v_count[9]                                                                                     ; VGA_SYNC:inst|v_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 1.701      ;
+; 38.333 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|blue[0]    ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.701      ;
+; 38.343 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.691      ;
+; 38.345 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[4] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.689      ;
+; 38.350 ; VGA_SYNC:inst|h_count[4]                                                                                     ; VGA_SYNC:inst|v_count[8] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.684      ;
+; 38.369 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[9] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.665      ;
+; 38.371 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[4] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.663      ;
+; 38.372 ; VGA_SYNC:inst|h_count[5]                                                                                     ; VGA_SYNC:inst|v_count[1] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.662      ;
+; 38.372 ; VGA_SYNC:inst|h_count[5]                                                                                     ; VGA_SYNC:inst|v_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.662      ;
+; 38.375 ; VGA_SYNC:inst|h_count[2]                                                                                     ; VGA_SYNC:inst|h_count[0] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.000      ; 1.657      ;
+; 38.376 ; VGA_SYNC:inst|h_count[7]                                                                                     ; VGA_SYNC:inst|v_count[8] ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 40.000       ; 0.002      ; 1.658      ;
++--------+--------------------------------------------------------------------------------------------------------------+--------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'inst2|altpll_component|pll|clk[0]'                                                                                                                                                                                                             ;
++-------+--------------------------+--------------------------------------------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                ; To Node                                                                                                      ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------+--------------------------------------------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.215 ; VGA_SYNC:inst|v_count[3] ; VGA_SYNC:inst|v_count[3]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; VGA_SYNC:inst|v_count[4] ; VGA_SYNC:inst|v_count[4]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; VGA_SYNC:inst|v_count[5] ; VGA_SYNC:inst|v_count[5]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; VGA_SYNC:inst|v_count[6] ; VGA_SYNC:inst|v_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; VGA_SYNC:inst|v_count[7] ; VGA_SYNC:inst|v_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; VGA_SYNC:inst|v_count[8] ; VGA_SYNC:inst|v_count[8]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; VGA_SYNC:inst|v_count[9] ; VGA_SYNC:inst|v_count[9]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; VGA_SYNC:inst|v_count[2] ; VGA_SYNC:inst|v_count[2]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.329 ; VGA_SYNC:inst|v_count[9] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 0.482      ;
+; 0.360 ; VGA_SYNC:inst|h_count[1] ; VGA_SYNC:inst|h_count[1]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; VGA_SYNC:inst|h_count[3] ; VGA_SYNC:inst|h_count[3]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; VGA_SYNC:inst|h_count[6] ; VGA_SYNC:inst|h_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.513      ;
+; 0.371 ; VGA_SYNC:inst|h_count[2] ; VGA_SYNC:inst|h_count[2]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; VGA_SYNC:inst|h_count[4] ; VGA_SYNC:inst|h_count[4]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.524      ;
+; 0.373 ; VGA_SYNC:inst|h_count[7] ; VGA_SYNC:inst|h_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.525      ;
+; 0.442 ; VGA_SYNC:inst|h_count[9] ; VGA_SYNC:inst|h_count[9]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.594      ;
+; 0.442 ; VGA_SYNC:inst|h_count[9] ; VGA_SYNC:inst|h_count[8]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.594      ;
+; 0.445 ; VGA_SYNC:inst|h_count[9] ; VGA_SYNC:inst|h_count[5]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.597      ;
+; 0.445 ; VGA_SYNC:inst|v_count[3] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 0.598      ;
+; 0.465 ; VGA_SYNC:inst|v_count[7] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.617      ;
+; 0.498 ; VGA_SYNC:inst|h_count[1] ; VGA_SYNC:inst|h_count[2]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499 ; VGA_SYNC:inst|h_count[3] ; VGA_SYNC:inst|h_count[4]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.651      ;
+; 0.511 ; VGA_SYNC:inst|h_count[2] ; VGA_SYNC:inst|h_count[3]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.663      ;
+; 0.514 ; VGA_SYNC:inst|h_count[0] ; VGA_SYNC:inst|h_count[1]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.666      ;
+; 0.533 ; VGA_SYNC:inst|h_count[1] ; VGA_SYNC:inst|h_count[3]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.685      ;
+; 0.541 ; VGA_SYNC:inst|h_count[0] ; VGA_SYNC:inst|h_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.693      ;
+; 0.546 ; VGA_SYNC:inst|h_count[2] ; VGA_SYNC:inst|h_count[4]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547 ; VGA_SYNC:inst|h_count[4] ; VGA_SYNC:inst|h_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.699      ;
+; 0.549 ; VGA_SYNC:inst|v_count[8] ; VGA_SYNC:inst|v_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.701      ;
+; 0.549 ; VGA_SYNC:inst|h_count[0] ; VGA_SYNC:inst|h_count[2]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.701      ;
+; 0.554 ; VGA_SYNC:inst|h_count[6] ; VGA_SYNC:inst|h_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.706      ;
+; 0.559 ; VGA_SYNC:inst|h_count[9] ; VGA_SYNC:inst|h_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.711      ;
+; 0.568 ; VGA_SYNC:inst|h_count[1] ; VGA_SYNC:inst|h_count[4]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.720      ;
+; 0.569 ; VGA_SYNC:inst|h_count[3] ; VGA_SYNC:inst|h_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.721      ;
+; 0.584 ; VGA_SYNC:inst|h_count[0] ; VGA_SYNC:inst|h_count[3]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.736      ;
+; 0.587 ; VGA_SYNC:inst|v_count[5] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.739      ;
+; 0.592 ; VGA_SYNC:inst|h_count[5] ; VGA_SYNC:inst|h_count[9]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.744      ;
+; 0.592 ; VGA_SYNC:inst|h_count[5] ; VGA_SYNC:inst|h_count[8]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.744      ;
+; 0.595 ; VGA_SYNC:inst|h_count[5] ; VGA_SYNC:inst|h_count[5]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.747      ;
+; 0.602 ; VGA_SYNC:inst|h_count[5] ; VGA_SYNC:inst|h_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.754      ;
+; 0.603 ; VGA_SYNC:inst|v_count[6] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.755      ;
+; 0.616 ; VGA_SYNC:inst|h_count[2] ; VGA_SYNC:inst|h_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.768      ;
+; 0.619 ; VGA_SYNC:inst|h_count[0] ; VGA_SYNC:inst|h_count[4]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.771      ;
+; 0.622 ; VGA_SYNC:inst|v_count[8] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 0.775      ;
+; 0.629 ; VGA_SYNC:inst|h_count[1] ; VGA_SYNC:inst|horiz_sync_out                                                                                 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 0.783      ;
+; 0.633 ; VGA_SYNC:inst|h_count[8] ; VGA_SYNC:inst|v_count[1]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 0.787      ;
+; 0.638 ; VGA_SYNC:inst|h_count[1] ; VGA_SYNC:inst|h_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.790      ;
+; 0.641 ; VGA_SYNC:inst|v_count[1] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 0.794      ;
+; 0.641 ; VGA_SYNC:inst|h_count[4] ; VGA_SYNC:inst|h_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.793      ;
+; 0.663 ; VGA_SYNC:inst|h_count[3] ; VGA_SYNC:inst|h_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.815      ;
+; 0.667 ; VGA_SYNC:inst|v_count[5] ; VGA_SYNC:inst|v_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.819      ;
+; 0.679 ; VGA_SYNC:inst|v_count[8] ; VGA_SYNC:inst|v_count[1]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.831      ;
+; 0.680 ; VGA_SYNC:inst|v_count[7] ; VGA_SYNC:inst|v_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; -0.001     ; 0.831      ;
+; 0.688 ; VGA_SYNC:inst|h_count[8] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg5 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.068      ; 0.894      ;
+; 0.689 ; VGA_SYNC:inst|v_count[2] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg2 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.066      ; 0.893      ;
+; 0.689 ; VGA_SYNC:inst|h_count[0] ; VGA_SYNC:inst|h_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.841      ;
+; 0.693 ; VGA_SYNC:inst|v_count[2] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 0.846      ;
+; 0.694 ; VGA_SYNC:inst|h_count[8] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg3 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.068      ; 0.900      ;
+; 0.696 ; VGA_SYNC:inst|h_count[5] ; VGA_SYNC:inst|h_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.848      ;
+; 0.699 ; VGA_SYNC:inst|v_count[1] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg1 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.066      ; 0.903      ;
+; 0.700 ; VGA_SYNC:inst|h_count[8] ; VGA_SYNC:inst|v_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 0.854      ;
+; 0.707 ; VGA_SYNC:inst|v_count[1] ; VGA_SYNC:inst|v_count[1]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.859      ;
+; 0.709 ; VGA_SYNC:inst|h_count[5] ; VGA_SYNC:inst|h_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.861      ;
+; 0.710 ; VGA_SYNC:inst|h_count[8] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg4 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.068      ; 0.916      ;
+; 0.710 ; VGA_SYNC:inst|h_count[2] ; VGA_SYNC:inst|h_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.862      ;
+; 0.718 ; VGA_SYNC:inst|h_count[8] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg7 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.068      ; 0.924      ;
+; 0.721 ; VGA_SYNC:inst|h_count[8] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg6 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.068      ; 0.927      ;
+; 0.732 ; VGA_SYNC:inst|h_count[8] ; VGA_SYNC:inst|h_count[8]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.884      ;
+; 0.732 ; VGA_SYNC:inst|h_count[1] ; VGA_SYNC:inst|h_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.884      ;
+; 0.736 ; VGA_SYNC:inst|v_count[8] ; VGA_SYNC:inst|v_count[4]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.888      ;
+; 0.736 ; VGA_SYNC:inst|v_count[6] ; VGA_SYNC:inst|v_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; -0.001     ; 0.887      ;
+; 0.738 ; VGA_SYNC:inst|v_count[8] ; VGA_SYNC:inst|v_count[9]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.890      ;
+; 0.744 ; VGA_SYNC:inst|v_count[1] ; VGA_SYNC:inst|v_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.896      ;
+; 0.744 ; VGA_SYNC:inst|h_count[7] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg5 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.068      ; 0.950      ;
+; 0.748 ; VGA_SYNC:inst|v_count[4] ; VGA_SYNC:inst|vert_sync_out                                                                                  ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 0.901      ;
+; 0.748 ; VGA_SYNC:inst|h_count[7] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg4 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.068      ; 0.954      ;
+; 0.752 ; VGA_SYNC:inst|h_count[7] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg3 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.068      ; 0.958      ;
+; 0.754 ; VGA_SYNC:inst|h_count[7] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg7 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.068      ; 0.960      ;
+; 0.754 ; VGA_SYNC:inst|h_count[7] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg6 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.068      ; 0.960      ;
+; 0.758 ; VGA_SYNC:inst|v_count[4] ; VGA_SYNC:inst|v_count[5]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 0.911      ;
+; 0.759 ; VGA_SYNC:inst|h_count[0] ; VGA_SYNC:inst|horiz_sync_out                                                                                 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 0.913      ;
+; 0.762 ; VGA_SYNC:inst|h_count[2] ; VGA_SYNC:inst|horiz_sync_out                                                                                 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 0.916      ;
+; 0.765 ; VGA_SYNC:inst|v_count[0] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg0 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.066      ; 0.969      ;
+; 0.765 ; VGA_SYNC:inst|v_count[0] ; VGA_SYNC:inst|v_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.917      ;
+; 0.768 ; VGA_SYNC:inst|h_count[9] ; VGA_SYNC:inst|blue[0]                                                                                        ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 0.922      ;
+; 0.780 ; VGA_SYNC:inst|v_count[3] ; VGA_SYNC:inst|v_count[5]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 0.933      ;
+; 0.783 ; VGA_SYNC:inst|h_count[0] ; VGA_SYNC:inst|h_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.935      ;
+; 0.792 ; VGA_SYNC:inst|v_count[4] ; VGA_SYNC:inst|v_count[6]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.001      ; 0.945      ;
+; 0.793 ; VGA_SYNC:inst|h_count[7] ; VGA_SYNC:inst|h_count[9]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.945      ;
+; 0.798 ; VGA_SYNC:inst|v_count[6] ; VGA_SYNC:inst|v_count[7]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.950      ;
+; 0.798 ; VGA_SYNC:inst|h_count[7] ; VGA_SYNC:inst|h_count[8]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.950      ;
+; 0.802 ; VGA_SYNC:inst|h_count[9] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg5 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.068      ; 1.008      ;
+; 0.803 ; VGA_SYNC:inst|h_count[9] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg3 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.068      ; 1.009      ;
+; 0.804 ; VGA_SYNC:inst|v_count[5] ; VGA_SYNC:inst|v_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; -0.001     ; 0.955      ;
+; 0.806 ; VGA_SYNC:inst|h_count[9] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg7 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.068      ; 1.012      ;
+; 0.806 ; VGA_SYNC:inst|h_count[8] ; VGA_SYNC:inst|blue[0]                                                                                        ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.002      ; 0.960      ;
+; 0.807 ; VGA_SYNC:inst|v_count[2] ; VGA_SYNC:inst|v_count[0]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.959      ;
+; 0.810 ; VGA_SYNC:inst|v_count[7] ; VGA_SYNC:inst|v_count[1]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; -0.001     ; 0.961      ;
+; 0.811 ; VGA_SYNC:inst|h_count[9] ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg6 ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.068      ; 1.017      ;
+; 0.814 ; VGA_SYNC:inst|h_count[4] ; VGA_SYNC:inst|h_count[5]                                                                                     ; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.966      ;
++-------+--------------------------+--------------------------------------------------------------------------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK_50'                                                                              ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------+
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50|combout                    ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50|combout                    ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; inst2|altpll_component|pll|clk[0]   ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; inst2|altpll_component|pll|clk[0]   ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; inst2|altpll_component|pll|inclk[0] ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; inst2|altpll_component|pll|inclk[0] ;
+; 17.620 ; 20.000       ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                            ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'inst2|altpll_component|pll|clk[0]'                                                                                                                                                       ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                             ; Clock Edge ; Target                                                                                                       ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg1 ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg1 ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg2 ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg2 ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg3 ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg3 ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg4 ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg4 ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg5 ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg5 ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg6 ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg6 ;
+; 18.077 ; 20.000       ; 1.923          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg7 ;
+; 18.077 ; 20.000       ; 1.923          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; char_ram:inst1|altsyncram:actual_memory_rtl_0|altsyncram_sd41:auto_generated|ram_block1a0~porta_address_reg7 ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|blue[0]                                                                                        ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|blue[0]                                                                                        ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[0]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[0]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[1]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[1]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[2]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[2]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[3]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[3]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[4]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[4]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[5]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[5]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[6]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[6]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[7]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[7]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[8]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[8]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[9]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|h_count[9]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|horiz_sync_out                                                                                 ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|horiz_sync_out                                                                                 ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[0]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[0]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[1]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[1]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[2]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[2]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[3]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[3]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[4]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[4]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[5]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[5]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[6]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[6]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[7]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[7]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[8]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[8]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[9]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|v_count[9]                                                                                     ;
+; 19.000 ; 20.000       ; 1.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|vert_sync_out                                                                                  ;
+; 19.000 ; 20.000       ; 1.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; VGA_SYNC:inst|vert_sync_out                                                                                  ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst1|actual_memory_rtl_0|auto_generated|ram_block1a0|clk0                                                   ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst1|actual_memory_rtl_0|auto_generated|ram_block1a0|clk0                                                   ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst2|altpll_component|_clk0~clkctrl|inclk[0]                                                                ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst2|altpll_component|_clk0~clkctrl|inclk[0]                                                                ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst2|altpll_component|_clk0~clkctrl|outclk                                                                  ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst2|altpll_component|_clk0~clkctrl|outclk                                                                  ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|blue[0]|clk                                                                                             ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|blue[0]|clk                                                                                             ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[0]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[0]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[1]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[1]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[2]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[2]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[3]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[3]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[4]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[4]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[5]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[5]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[6]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[6]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[7]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[7]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[8]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[8]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[9]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|h_count[9]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|horiz_sync_out|clk                                                                                      ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|horiz_sync_out|clk                                                                                      ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|v_count[0]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|v_count[0]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|v_count[1]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|v_count[1]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|v_count[2]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|v_count[2]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; High Pulse Width ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|v_count[3]|clk                                                                                          ;
+; 20.000 ; 20.000       ; 0.000          ; Low Pulse Width  ; inst2|altpll_component|pll|clk[0] ; Rise       ; inst|v_count[3]|clk                                                                                          ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; VGA_B[*]  ; CLOCK_50   ; 3.335 ; 3.335 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[0] ; CLOCK_50   ; 3.335 ; 3.335 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[1] ; CLOCK_50   ; 3.299 ; 3.299 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[2] ; CLOCK_50   ; 3.315 ; 3.315 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[3] ; CLOCK_50   ; 3.275 ; 3.275 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_G[*]  ; CLOCK_50   ; 3.453 ; 3.453 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[0] ; CLOCK_50   ; 3.453 ; 3.453 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[1] ; CLOCK_50   ; 3.204 ; 3.204 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[2] ; CLOCK_50   ; 3.335 ; 3.335 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[3] ; CLOCK_50   ; 3.453 ; 3.453 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_HS    ; CLOCK_50   ; 2.111 ; 2.111 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_R[*]  ; CLOCK_50   ; 3.453 ; 3.453 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[0] ; CLOCK_50   ; 3.433 ; 3.433 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[1] ; CLOCK_50   ; 3.435 ; 3.435 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[2] ; CLOCK_50   ; 3.453 ; 3.453 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[3] ; CLOCK_50   ; 3.423 ; 3.423 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_VS    ; CLOCK_50   ; 2.245 ; 2.245 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; VGA_B[*]  ; CLOCK_50   ; 2.552 ; 2.552 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[0] ; CLOCK_50   ; 2.612 ; 2.612 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[1] ; CLOCK_50   ; 2.576 ; 2.576 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[2] ; CLOCK_50   ; 2.592 ; 2.592 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[3] ; CLOCK_50   ; 2.552 ; 2.552 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_G[*]  ; CLOCK_50   ; 2.481 ; 2.481 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[0] ; CLOCK_50   ; 2.730 ; 2.730 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[1] ; CLOCK_50   ; 2.481 ; 2.481 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[2] ; CLOCK_50   ; 2.612 ; 2.612 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[3] ; CLOCK_50   ; 2.730 ; 2.730 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_HS    ; CLOCK_50   ; 2.111 ; 2.111 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_R[*]  ; CLOCK_50   ; 2.700 ; 2.700 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[0] ; CLOCK_50   ; 2.710 ; 2.710 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[1] ; CLOCK_50   ; 2.712 ; 2.712 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[2] ; CLOCK_50   ; 2.730 ; 2.730 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[3] ; CLOCK_50   ; 2.700 ; 2.700 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_VS    ; CLOCK_50   ; 2.245 ; 2.245 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                            ;
++------------------------------------+--------+-------+----------+---------+---------------------+
+; Clock                              ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack                   ; 33.199 ; 0.215 ; N/A      ; N/A     ; 10.000              ;
+;  CLOCK_50                          ; N/A    ; N/A   ; N/A      ; N/A     ; 10.000              ;
+;  inst2|altpll_component|pll|clk[0] ; 33.199 ; 0.215 ; N/A      ; N/A     ; 17.686              ;
+; Design-wide TNS                    ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  CLOCK_50                          ; N/A    ; N/A   ; N/A      ; N/A     ; 0.000               ;
+;  inst2|altpll_component|pll|clk[0] ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------------------------+--------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; VGA_B[*]  ; CLOCK_50   ; 8.315 ; 8.315 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[0] ; CLOCK_50   ; 8.315 ; 8.315 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[1] ; CLOCK_50   ; 8.272 ; 8.272 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[2] ; CLOCK_50   ; 8.288 ; 8.288 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[3] ; CLOCK_50   ; 8.248 ; 8.248 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_G[*]  ; CLOCK_50   ; 8.622 ; 8.622 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[0] ; CLOCK_50   ; 8.622 ; 8.622 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[1] ; CLOCK_50   ; 7.998 ; 7.998 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[2] ; CLOCK_50   ; 8.315 ; 8.315 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[3] ; CLOCK_50   ; 8.622 ; 8.622 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_HS    ; CLOCK_50   ; 4.994 ; 4.994 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_R[*]  ; CLOCK_50   ; 8.618 ; 8.618 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[0] ; CLOCK_50   ; 8.602 ; 8.602 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[1] ; CLOCK_50   ; 8.600 ; 8.600 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[2] ; CLOCK_50   ; 8.618 ; 8.618 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[3] ; CLOCK_50   ; 8.588 ; 8.588 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_VS    ; CLOCK_50   ; 5.475 ; 5.475 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; VGA_B[*]  ; CLOCK_50   ; 2.552 ; 2.552 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[0] ; CLOCK_50   ; 2.612 ; 2.612 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[1] ; CLOCK_50   ; 2.576 ; 2.576 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[2] ; CLOCK_50   ; 2.592 ; 2.592 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_B[3] ; CLOCK_50   ; 2.552 ; 2.552 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_G[*]  ; CLOCK_50   ; 2.481 ; 2.481 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[0] ; CLOCK_50   ; 2.730 ; 2.730 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[1] ; CLOCK_50   ; 2.481 ; 2.481 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[2] ; CLOCK_50   ; 2.612 ; 2.612 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_G[3] ; CLOCK_50   ; 2.730 ; 2.730 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_HS    ; CLOCK_50   ; 2.111 ; 2.111 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_R[*]  ; CLOCK_50   ; 2.700 ; 2.700 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[0] ; CLOCK_50   ; 2.710 ; 2.710 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[1] ; CLOCK_50   ; 2.712 ; 2.712 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[2] ; CLOCK_50   ; 2.730 ; 2.730 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+;  VGA_R[3] ; CLOCK_50   ; 2.700 ; 2.700 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
+; VGA_VS    ; CLOCK_50   ; 2.245 ; 2.245 ; Rise       ; inst2|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                   ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; From Clock                        ; To Clock                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 796      ; 0        ; 0        ; 0        ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                    ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; From Clock                        ; To Clock                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; inst2|altpll_component|pll|clk[0] ; inst2|altpll_component|pll|clk[0] ; 796      ; 0        ; 0        ; 0        ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 14    ; 14   ;
+; Unconstrained Output Port Paths ; 170   ; 170  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Sep 21 10:35:06 2016
+Info: Command: quartus_sta vga_demo -c vga_demo
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'vga_demo.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained generated clocks found in the design. Calling "derive_pll_clocks -create_base_clocks"
+Info (332110): Deriving PLL clocks
+    Info (332110): create_clock -period 20.000 -waveform {0.000 10.000} -name CLOCK_50 CLOCK_50
+    Info (332110): create_generated_clock -source {inst2|altpll_component|pll|inclk[0]} -divide_by 2 -duty_cycle 50.00 -name {inst2|altpll_component|pll|clk[0]} {inst2|altpll_component|pll|clk[0]}
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332146): Worst-case setup slack is 33.199
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    33.199         0.000 inst2|altpll_component|pll|clk[0] 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 inst2|altpll_component|pll|clk[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 10.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    10.000         0.000 CLOCK_50 
+    Info (332119):    17.686         0.000 inst2|altpll_component|pll|clk[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 36.799
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    36.799         0.000 inst2|altpll_component|pll|clk[0] 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 inst2|altpll_component|pll|clk[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 10.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    10.000         0.000 CLOCK_50 
+    Info (332119):    18.077         0.000 inst2|altpll_component|pll|clk[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 484 megabytes
+    Info: Processing ended: Wed Sep 21 10:35:08 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
